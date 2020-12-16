@@ -1,10 +1,9 @@
 <?php 
-$title = 'PHP Practice';
+$title = 'PHP Practice'; 
+$h1 = '<h1> hello world </h1>';
 
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +12,7 @@ $title = 'PHP Practice';
     <title><?php echo $title ?></title>
 </head>
 <body>
-    <h1>Hello</h1>
+    <?php echo $h1 ?>
+
 </body>
 </html>
