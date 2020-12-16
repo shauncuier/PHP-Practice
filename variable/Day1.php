@@ -1,8 +1,6 @@
 <?php 
 $title = 'PHP Practice'; 
 $h1 = '<h1> hello world </h1>';
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +11,5 @@ $h1 = '<h1> hello world </h1>';
 </head>
 <body>
     <?php echo $h1 ?>
-
 </body>
 </html>
