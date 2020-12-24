@@ -31,7 +31,7 @@
                 $operator = $_GET['operator'];
                 switch ($operator) {
                     case "Select":
-                        echo "<p style='color: red'>Select one Option</p>";
+                        echo "<h1 style='color: red'>Select one Option</h1>";
                         break;
                     case "Add":
                         echo $result1+$result2;
