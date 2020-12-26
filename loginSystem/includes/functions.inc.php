@@ -1,5 +1,6 @@
 <?php
 
+//Sing-Up Function Start Here
 
 function emptyInputSingup($name,$email,$username,$pwd,$pwdRepeat ){
 $result;
@@ -68,12 +69,11 @@ function uidExists($conn, $username, $email){
 }
 
 
-
 function createUser($conn, $name, $email, $username, $pwd){
     $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header('location: ../singup.php?error=stmtfaliedTocreateUser');
+        header('location: ../singup.php?error=stmtfalied');
         exit();
     }
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
@@ -85,3 +85,44 @@ function createUser($conn, $name, $email, $username, $pwd){
     exit();
 }
 
+//Sing-Up Function End
+
+// LogIn Functions Start Here
+function emptyInputLogin($username,$pwd){
+    $result;
+    if (empty($username) || empty($pwd) ) {
+        $result = true;
+    }
+    else{
+        $result = false;
+    }
+    return $result;
+}
+
+
+function loginUser($conn, $username,$pwd)
+{
+    $uidExists = uidExists($conn, $username, $username);
+
+    if ($uidExists === false) {
+        header('location: ../login.php?error=wronglogin');
+        exit();
+    }
+
+    $pwdHashed = $uidExists["usersPwd"];
+    $checkPwd = password_verify($pwd, $pwdHashed);
+
+    if ($checkPwd === false) {
+        header('location: ../login.php?error=wronglogin');
+        exit();
+    }
+    else if ($checkPwd === true){
+        session_start();
+        $_SESSION["userid"] = $uidExists["usersId"];
+        $_SESSION["useruid"] = $uidExists["usersUid"];
+
+        header('location: ../index.php');
+        exit();
+    }
+}
+// LogIn Functions End Here

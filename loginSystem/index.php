@@ -1,7 +1,9 @@
 <?php include_once 'header.php' ?>
             <section class="index-intro">
-                <h1>This Is an Introduction</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, quae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci dolor excepturi exercitationem laborum, saepe!</p>
+            <div class="jumbotron text-center">
+                <h1>This is Sing Up system Practice Project </h1>
+                <p>Read More About Our Website!</p>
+            </div>
             </section>
             <section class="index-categories">
                 <h2>Some Basic Category</h2>

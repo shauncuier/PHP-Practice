@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
     }
     
     if (uidExists($conn, $username, $email) !== false) {
-        header('location: ../singup.php?error=usernametaken');
+        header('location: ../singup.php?error=usernameoremailtaken');
         exit();
         }
     createUser($conn, $name, $email, $username, $pwd);
