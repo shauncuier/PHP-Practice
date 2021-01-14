@@ -10,6 +10,5 @@
             $array = array("A","B","C","D","E");
             echo $array[4];
         ?>
-        
 </body>
 </html>
