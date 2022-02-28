@@ -1,0 +1,20 @@
+{
+    "name": "shaun/mvc",
+    "autoload": {
+        "psr-4": {
+            "Shaun\\Mvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Shaun",
+            "email": "shauncuier@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}
