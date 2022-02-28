@@ -2,7 +2,7 @@
     "name": "shaun/mvc",
     "autoload": {
         "psr-4": {
-            "Shaun\\Mvc\\": "src/"
+            "app\\": "./"
         }
     },
     "authors": [
@@ -11,10 +11,7 @@
             "email": "shauncuier@gmail.com"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "app\\": "./"
-        }
-    },
+
+
     "require": {}
 }
